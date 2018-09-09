@@ -1,4 +1,5 @@
 #include<iostream>
+#include<conio.h>
 using namespace std;
 #define max_size 101
 class queue_{
@@ -64,28 +65,14 @@ class queue_{
 int main(){
     queue_ q;
     q.menu();
-    /*q.enqueue(5);
-    q.print();
-    q.enqueue(3);
-    q.print();
-    q.enqueue(7);
-    q.enqueue(6);
-    q.print();
-    cout<<q.frnt_()<<endl;
-    q.dequeue();
-    q.print();
-    cout<<q.frnt_()<<endl;
-    q.dequeue();
-    q.dequeue();
-    cout<<q.frnt_()<<endl;
-    q.dequeue();
-    q.dequeue();
-    //cout<<q.frnt_()<<endl;*/
+    /*q.enqueue(5);q.print();q.enqueue(3);q.print();q.enqueue(7);q.enqueue(6);q.print();cout<<q.frnt_()<<endl;
+    q.dequeue();q.print();cout<<q.frnt_()<<endl;q.dequeue();q.dequeue();cout<<q.frnt_()<<endl;q.dequeue();
+    q.dequeue();cout<<q.frnt_()<<endl;*/
     return 0;
 }
 void queue_::menu(){
     cout<<endl<<"What would u like to perform: "<<endl<<"1. Check Queue Empty"<<endl<<"2. Check Queue Full"<<endl
-    <<"3. Check Front of Queue"<<endl<<"4. Print Queue"<<endl<<"5. Enqueue"<<endl<<"6. Dequeue"<<endl;
+    <<"3. Check Front of Queue"<<endl<<"4. Print Queue"<<endl<<"5. Enqueue"<<endl<<"6. Dequeue"<<endl<<"7. Exit"<<endl;
     int dec;
     cin>>dec;
     switch(dec){
@@ -114,5 +101,10 @@ void queue_::menu(){
         case 6: dequeue();
                 menu();
                 break;
+        case 7: cout<<"Good Bye!"<<endl;
+                return;
+        default: cout<<"Invalid Choice"<<endl;
+                 menu();
+                 break;
     }
 }
